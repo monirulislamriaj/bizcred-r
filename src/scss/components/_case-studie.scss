@@ -1,0 +1,693 @@
+.case-studie {
+  padding-bottom: 120px;
+  position: relative;
+  @include desktop {
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-bottom: 0px;
+  }
+  .shap-1 {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    z-index: -1;
+    animation: moveTopBottom 3s infinite linear;
+
+    @include desktop {
+      top: 14%;
+    }
+
+    @include tablet {
+      top: 10%;
+      left: 5%;
+    }
+
+    @include mobile {
+      top: 15%;
+    }
+
+    @include mobile-xs {
+      top: 10%;
+    }
+  }
+  .shap-2 {
+    position: absolute;
+    top: 53%;
+    right: 17%;
+    z-index: -1;
+    animation: moveTopBottom 3s infinite linear;
+
+    @include mobile {
+      top: 60%;
+    }
+  }
+  .shap-3 {
+    position: absolute;
+    bottom: 3%;
+    z-index: -1;
+    left: 27%;
+    animation: moveLeftRight 3s infinite linear;
+
+    @include desktop {
+      bottom: 12%;
+    }
+
+    @include tablet {
+      bottom: 17%;
+      left: 25%;
+    }
+
+    @include mobile-xs {
+      bottom: 18%;
+      left: 10%;
+    }
+  }
+  &-images {
+    img {
+      width: 100%;
+      box-shadow: 0px 20px 57px 0px rgba(24, 27, 33, 0.15);
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+  }
+  &-content {
+    @include desktop {
+      text-align: center;
+    }
+    @include tablet {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 29px;
+      line-height: 40px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      @include desktop {
+        width: 80%;
+        margin: 0 auto 20px;
+      }
+      @include tablet {
+        width: 100%;
+        font-size: 25px;
+      }
+      @include mobile {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @include mobile-xs {
+        font-size: 18px;
+      }
+    }
+    &-action{
+      padding: 15px 35px;
+      text-decoration: none;
+      transition: all .3s ease;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 20px;
+      background: $white;
+      color: #948c8cd6;
+      border: 1px solid #e5e5e5;
+      &:hover{
+        text-decoration: none;
+        color: $white;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+  // *******start-case-studie-two*******
+  &-two {
+    background: url(../images/case-studie/Case-Studies-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 145px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #00182e, $alpha: 0.85);
+      top: 0;
+      left: 0;
+    }
+    @include tablet {
+      padding-bottom: 80px;
+    }
+    &-slider {
+      display: flex;
+      padding-top: 50px;
+      @include mobile {
+        width: 80%;
+        margin: 0 auto;
+      }
+      &-item {
+        text-align: center;
+        position: relative;
+        outline: 0;
+        .item-thum {
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            background: $primary-color;
+            opacity: 0.9;
+            display: block;
+            transition: all 0.5s ease-in-out;
+            pointer-events: none;
+          }
+          a {
+            img {
+              width: 100%;
+            }
+          }
+          .item-thum-icon {
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+            &::before,
+            &::after {
+              position: absolute;
+              content: "";
+              background: $white;
+              width: 40px;
+              height: 2px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              cursor: pointer;
+              pointer-events: none;
+            }
+            &::after {
+              transform: translate(-50%, -50%) rotate(90deg);
+            }
+          }
+        }
+        a {
+          margin-top: 30px;
+          color: $white;
+          display: block;
+          transition: all 0.3s ease-in-out;
+          font-size: 20px;
+          outline: 0;
+        }
+        &:hover {
+          .item-thum {
+            &::before {
+              transform: scaleY(1);
+            }
+          }
+          .item-thum-icon {
+            opacity: 1;
+          }
+          a {
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &-link {
+      text-align: center;
+      padding-top: 65px;
+    }
+  }
+  // *******end-case-studie-two*******
+  // *******start-case-studie-three*******
+  &-three {
+    padding: 70px 0 115px;
+
+    &-item {
+      text-align: center;
+      position: relative;
+      margin-top: 50px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        transform: scale(0);
+        transition: all 0.5s ease-in-out;
+        top: 4%;
+        left: 5%;
+        opacity: 0.7;
+        background: $primary-color;
+
+        @include desktop {
+          height: 75%;
+        }
+
+        @include mobile {
+          height: 80%;
+        }
+      }
+      &-icon {
+        position: absolute;
+        display: flex;
+        top: 40%;
+        left: 35%;
+        transition: all 0.5s ease-in-out;
+        transform: scale(0);
+
+        @include desktop {
+          top: 30%;
+          left: 25%;
+        }
+
+        @include tablet {
+          top: 35%;
+          left: 30%;
+        }
+
+        @include mobile {
+          top: 40%;
+          left: 40%;
+        }
+
+        i {
+          background: white;
+          color: $text-color-dark;
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          border-radius: 50%;
+          line-height: 50px;
+
+          @include tablet {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+          }
+        }
+      }
+
+      &-thum {
+        background: #424e66;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        color: $text-color-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 20px;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        h3 {
+          color: $primary-color;
+        }
+        .case-studie-three-item-icon {
+          transform: scale(1);
+        }
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  // *******end-case-studie-three*******
+  // *******start-case-studie-four*******
+  &-four {
+    padding: 70px 0 115px;
+
+    &-item {
+      text-align: center;
+      position: relative;
+      margin-bottom: 50px;
+      cursor: pointer;
+
+      &-icon {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transition: all 0.5s ease-in-out;
+        transition-delay: 0.2s;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+
+        a {
+          i {
+            background: white;
+            color: $text-color-dark;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            line-height: 50px;
+
+            @include tablet {
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+
+      &-thum {
+        background: #424e66;
+
+        img {
+          width: 100%;
+        }
+
+        h3 {
+          color: $white;
+          font-size: 20px;
+          font-weight: 600;
+          display: block;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          bottom: 0%;
+          left: 50%;
+          transform: translate(-50%);
+          width: 100%;
+          padding:20px 0;
+          margin-bottom:0;
+          background:  rgba($color: #000000, $alpha: .2);
+          @include desktop-lg {
+            top: 80%;
+          }
+
+          @include tablet {
+            top: 85%;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transition: all 0.7s ease-in-out;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        background: $primary-color;
+      }
+
+      &:hover {
+        .case-studie-four-item-icon {
+          opacity: 1;
+        }
+
+        &::before {
+          transform: scaleX(1);
+        }
+        h3{
+          background: transparent;
+        }
+      }
+    }
+  }
+  // *******end-case-studie-four*******
+  // *******start-case-studie-five*******
+  &-five {
+    padding-top: 120px;
+    @include desktop-lg {
+      padding-top: 80px;
+    }
+    .isotop-menu {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      margin-bottom: 50px;
+
+      button {
+        background: none;
+        border: none;
+        color: $text-color;
+        font-size: 16px;
+        text-transform: capitalize;
+        cursor: pointer;
+        margin-right: 40px;
+        transition: all 0.3s ease-in-out;
+        outline: 0;
+
+        @include desktop {
+          margin-right: 20px;
+        }
+
+        @include tablet {
+          margin-right: 10px;
+        }
+
+        @include mobile {
+          margin-right: 0px;
+        }
+      }
+    }
+    .active {
+      color: $text-color-dark !important;
+    }
+    &-item {
+      text-align: left;
+      position: relative;
+      margin-bottom: 100px;
+      @include desktop {
+        text-align: center;
+      }
+      &-icon {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+        a {
+          i {
+            background: white;
+            color: $text-color-dark;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+
+            @include desktop {
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+
+      &-thum {
+        background: #424e66;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          transform: scale(0);
+          transition: all 0.5s ease-in-out;
+          top: 3%;
+          left: 5%;
+          opacity: 0.7;
+          background: $primary-color;
+
+          @include mobile {
+            top: 5%;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        color: $text-color-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 25px;
+        margin-bottom: 15px;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+
+      a {
+        color: $text-color-dark;
+        font-weight: 600;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        h3 {
+          color: $primary-color;
+        }
+        a {
+          color: $primary-color;
+        }
+        .case-studie-five-item-icon {
+          opacity: 1;
+        }
+        .case-studie-five-item-thum {
+          &::before {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  // *******end-case-studie-five*******
+  // *******start-case-studie-six*******
+  &-six {
+    padding-top: 120px;
+    @include desktop-lg {
+      padding-top: 80px;
+    }
+    .isotop-menu {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      margin-bottom: 50px;
+      button {
+        background: none;
+        border: none;
+        color: $text-color;
+        font-size: 16px;
+        text-transform: capitalize;
+        cursor: pointer;
+        margin-right: 40px;
+        transition: all 0.3s ease-in-out;
+        outline: 0;
+        @include mobile {
+          margin-right: 20px;
+        }
+        @include mobile-xs {
+          margin-right: 0px;
+        }
+      }
+    }
+    .active {
+      color: $text-color-dark !important;
+    }
+    &-item {
+      text-align: left;
+      position: relative;
+      margin-bottom: 100px;
+      cursor: pointer;
+      @include desktop {
+        text-align: center;
+      }
+      &-icon {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+        a {
+          i {
+            background: white;
+            color: $text-color-dark;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            @include tablet {
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+            }
+          }
+        }
+      }
+      &-thum {
+        position: relative;
+        background: #424e66;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          transform: scale(0);
+          transition: all 0.5s ease-in-out;
+          top: 4%;
+          left: 5%;
+          opacity: 0.9;
+          background: $primary-color;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      h3 {
+        color: $text-color-dark;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 20px;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+      a {
+        color: $text-color-dark;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        h3 {
+          color: $primary-color;
+        }
+        a {
+          color: $primary-color;
+        }
+        .case-studie-six-item-icon {
+          opacity: 1;
+        }
+        .case-studie-six-item-thum {
+          &::before {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  // *******end-case-studie-six*******
+}
+
+

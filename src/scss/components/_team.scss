@@ -1,0 +1,314 @@
+.team {
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  .shape1 {
+    position: absolute;
+    top: 50%;
+    left: -13%;
+  }
+
+  .shape2 {
+    position: absolute;
+    top: -20%;
+    right: 5%;
+
+    @include desktop-lg {
+      top: -30%;
+    }
+  }
+  &-item {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    @include desktop {
+      margin-bottom: 50px;
+    }
+    &-thumb {
+      background: #666;
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+    &-content {
+      padding: 40px 25px;
+      background-color: rgb(255, 255, 255);
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      transition: all 0.3s ease-in-out;
+
+      @include desktop {
+        text-align: center;
+      }
+
+      h3 {
+        @include tablet {
+          font-size: 20px;
+        }
+      }
+
+      &:hover {
+        border-color: $white;
+        box-shadow: 0px 20px 49px 0px rgba(24, 27, 33, 0.1);
+      }
+    }
+    &-social-icon {
+      position: absolute;
+      top: 65%;
+      right: 10%;
+
+      @include desktop-lg {
+        top: 60%;
+        right: 13%;
+      }
+
+      @include desktop {
+        top: 62%;
+        right: 10%;
+      }
+
+      @include tablet {
+        top: 72%;
+        right: 7%;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      i {
+        background: $primary-color;
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50%;
+        color: $white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 16px 46px 0px rgba(19, 32, 58, 0.25);
+      }
+    }
+    .team-item-social-list {
+      position: absolute;
+      right: 0%;
+      top: 15%;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      transform-origin: right;
+      transform: translateX(0%);
+
+      @include desktop-lg {
+        top: 7%;
+      }
+
+      @include desktop {
+        top: 10%;
+      }
+
+      @include tablet {
+        top: 35%;
+      }
+
+      @include mobile {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        right: 5%;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+
+          a {
+            background: #515c6e;
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-align: center;
+            line-height: 55px;
+            border-radius: 50%;
+            color: $white;
+            margin-bottom: 10px;
+            transform-origin: bottom;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: $white;
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .team-item-social-list {
+        opacity: 1;
+        transform-origin: left;
+        transform: translateX(-70%);
+        @include mobile {
+          top: 50%;
+          transform: translate(-5%, -50%);
+          right: 5%;
+        }
+      }
+    }
+  }
+
+  // start-team two
+  &-tow {
+    background: url(../images/team/team-bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 155px;
+    overflow: hidden;
+    position: relative;
+
+    @include desktop {
+      padding-bottom: 70px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #00182e, $alpha: 0.85);
+      top: 0;
+      left: 0;
+    }
+
+    @include tablet {
+      padding-bottom: 80px;
+    }
+
+    &-slider {
+      display: flex;
+      padding-top: 50px;
+
+      &-item {
+        text-align: center;
+        position: relative;
+        outline: 0;
+
+        &-link {
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0.2s;
+          transform: translate(-50%, -90%);
+          width: 100%;
+
+          ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+              list-style: none;
+              display: inline-block;
+
+              a {
+                color: $white;
+                display: block;
+                margin: 0;
+                padding: 0 10px;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+
+        &-thum {
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          &:before {
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            background: $primary-color;
+            clip-path: polygon(0 79%, 100% 40%, 100% 100%, 0 100%);
+            opacity: 0.7;
+            display: block;
+          }
+        }
+
+        h4 {
+          margin-top: 30px;
+          color: $white;
+          display: block;
+          transition: all 0.3s ease-in-out;
+          font-size: 15px;
+        }
+
+        &:hover {
+          .team-tow-slider-item-thum {
+            &::before {
+              transform: scaleY(1);
+            }
+          }
+
+          .team-tow-slider-item-link {
+            opacity: 1;
+
+            a {
+              color: $white;
+            }
+          }
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: -75px;
+
+        @include desktop {
+          bottom: -15%;
+        }
+
+        li {
+          display: inline-block;
+          margin: 0 2px;
+
+          button {
+            background: #616f7c;
+            text-indent: -999999999px;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            outline: 0;
+          }
+        }
+      }
+
+      .slick-dots li.slick-active button {
+        background: #61cd91;
+      }
+    }
+  }
+}

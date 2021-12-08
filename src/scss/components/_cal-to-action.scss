@@ -1,0 +1,61 @@
+.cal-to-action {
+  padding: 75px 0;
+  background: $primary-color;
+  position: relative;
+  overflow: hidden;
+
+  .shape-1{
+    position: absolute;
+    top: -40%;
+    left: 11%;
+    animation: moveTopBottom 3s linear infinite;
+  }
+  .shape-2{
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    animation: moveTopBottom 3s linear infinite;
+  }
+
+  .shape-1, .shape-2{
+    svg{
+      path{
+        opacity: .5;
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 50px 0;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center
+    }
+
+    .title {
+      @include mobile {
+        margin-bottom:20px;
+      }
+      h2 {
+        color: $white;
+
+        @include desktop {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        @include tablet {
+          font-size: 17px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

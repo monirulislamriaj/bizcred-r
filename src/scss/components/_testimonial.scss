@@ -1,0 +1,551 @@
+.testimonial {
+  // ******start-testimonial******
+  position: relative;
+  background: linear-gradient(90deg, #f0f2f5 63%, #ffffff 37%);
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  overflow: hidden;
+
+  .shap-2{
+    position: absolute;
+    top: 5%;
+    left: 0;
+  }
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  .shap {
+    position: absolute;
+    right: 16%;
+    bottom: 16%;
+    animation: moveTopBottom 3s infinite linear;
+
+    @include desktop {
+      right: 5%;
+    }
+
+    @include mobile-xs {
+      top: 70%;
+    }
+  }
+  .shap3 {
+    position: absolute;
+    position: absolute;
+    right: -9%;
+    top: 8%;
+    animation: moveTopBottom 3s infinite linear;
+  }
+
+  &-images {
+
+    @include desktop {
+      padding: 50px 0px 0px 0px;
+    }
+
+    @include tablet {
+      padding: 20px 80px 0;
+    }
+
+    img {
+      max-width: 100%;
+      width: 80%;
+      animation: moveTopBottom 3s infinite linear;
+    }
+  }
+
+  &-slider {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: $white;
+    box-shadow: 0px 20px 66px 0px rgba(51, 77, 128, 0.12);
+
+    @include desktop-lg {
+      margin-left: -15%;
+    }
+
+    @include desktop {
+      margin-left: -5%;
+    }
+
+    @include tablet {
+      margin-left: 5%;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
+
+    @include mobile-xs {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &-itam {
+      outline: none;
+      background: white;
+      padding: 50px;
+
+      &-list {
+        margin-bottom: 25px;
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            display: inline-block;
+            &:not(:last-child){
+              margin-right: 5px;
+            }
+            i {
+              color: #fec53d;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      p {
+        margin: 0 0 25px 0;
+        font-size: 17px;
+        font-family: $secondary-font;
+        font-style: italic;
+        line-height: 28px;
+        font-weight: 400;
+      }
+
+      &-cliend {
+        display: flex;
+        align-items: center;
+
+        .reviewer-thumb{
+          height: 75px;
+          width: 75px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        &-desction {
+          padding-left: 20px;
+          h4 {
+            font-size: 20px;
+            line-height: 1;
+            margin: 0;
+            font-weight: 600;
+            @include mobile {
+              font-size: 16px;
+            }
+
+            @include mobile-xs {
+              font-size: 14px;
+            }
+          }
+
+          a {
+            font-size: 15px;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .slick-prev {
+      left: 70%;
+    }
+
+    .slick-next {
+      right: 25px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      content: none;
+    }
+  }
+
+  .testimonial-slider .slick-arrow {
+    top: 80%;
+    font-size: 18px;
+    z-index: 999;
+    border: 1px solid $border-color;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    svg{
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      path{
+        fill: #828486;
+      }
+    }
+
+    @include desktop-lg {
+      top: 84%;
+    }
+
+    @include desktop {
+      top: 90%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      transform: translateX(-50%);
+    }
+    @include tablet {
+      top: 85%;
+    }
+    @include mobile {
+      top: 88%;
+    }
+    &:hover {
+      background: $primary-color;
+      svg{
+        path{
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
+  .testimonial-slider .slick-next {
+    left: auto;
+    right: 60px;
+
+    @include desktop-lg {
+      right: 30px;
+    }
+    @include desktop {
+      right: 25%;
+    }
+    @include tablet {
+      right: 33%;
+    }
+    @include mobile {
+      right: 25%;
+    }
+  }
+
+  // ##########end-testimonial############
+
+  /* Testimonial Two */
+  &-tow {
+    background: url(../images/testomoneal/testomoneal2.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &-content {
+      padding: 115px 0;
+      display: inline-block;
+
+      @include desktop {
+        margin-top: 5%;
+        text-align: center;
+      }
+
+      @include mobile {
+        margin-left: 15px;
+      }
+
+      @include mobile-xs {
+        padding: 40px 0;
+      }
+
+      h2 {
+        @include desktop {
+          font-size: 30px;
+        }
+
+        @include tablet {
+          font-size: 24px;
+        }
+
+        @include mobile {
+          font-size: 18px;
+        }
+
+        @include mobile-xs {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+
+      p {
+        font-size: 17px;
+        color: $text-color-dark;
+        margin-bottom: 50px;
+
+        @include desktop {
+          width: 80%;
+          margin: 0 auto;
+          padding-bottom: 50px;
+        }
+      }
+
+      &-item {
+        width: 48%;
+        border: 1px solid #ffffff0d;
+        background-color: $white;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @include desktop-lg {
+          width: 46%;
+        }
+
+        @include mobile {
+          width: 47%;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: #61cd91;
+              fill-opacity: 1;
+            }
+          }
+        }
+
+        svg {
+          width: 80px;
+          padding: 30px 0 10px;
+          height: 80px;
+
+          path {
+            fill: #b0e6c8;
+            fill-opacity: 0.7;
+          }
+        }
+
+        h3 {
+          padding-bottom: 20px;
+          font-size: 18px;
+
+          @include tablet {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  /* End Testimonial Two */
+
+  // ******start-testimonial-three******
+  &-three {
+    background: #f0f2f5;
+    padding: 100px 0;
+
+    &-item {
+      background: white;
+      padding: 50px 45px;
+
+      @include tablet {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      &-list {
+        padding-bottom: 25px;
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            display: inline-block;
+
+            i {
+              color: #fec53d;
+            }
+          }
+        }
+      }
+
+      .testimonial-three-cliend {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        img {
+          width: 100px;
+          border-radius: 50%;
+          background: red;
+
+          @include desktop {
+            width: 70px;
+          }
+        }
+
+        &-desction {
+          padding-left: 20px;
+          margin-bottom: 0;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include desktop {
+              font-size: 18px;
+            }
+          }
+
+          p {
+            font-size: 15px;
+            color: $primary-color;
+
+            @include tablet {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ##########end-testimonial-three#############
+
+  // ******start-testimonial-four******
+  &-four {
+    background: url(../images/testomoneal/testomoneal-four-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 150px 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #00182e, $alpha: 0.85);
+      top: 0;
+      left: 0;
+    }
+
+    &-item {
+      @include desktop {
+        margin-top: 30px;
+      }
+
+      @include tablet {
+        text-align: center;
+      }
+
+      &-content {
+        background: white;
+        padding: 40px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        p {
+          font-style: italic;
+        }
+        .drop {
+          top: 90%;
+          left: 8%;
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          transform: rotate(45deg);
+          background: #fff;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+
+          @include tablet {
+            left: 30%;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+
+      &-cliend {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        .cliend-logo {
+          img {
+            max-width: 100%;
+            border-radius: 50%;
+            padding: 5px;
+            background: #415160;
+            width: 100px;
+            height: 100px;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
+        .cliend-descipton {
+          padding-left: 20px;
+
+          h3 {
+            color: $white;
+            font-size: 18px;
+            margin-bottom: 0;
+            transition: all 0.3s ease-in-out;
+          }
+
+          p {
+            color: $white;
+            margin-bottom: 0;
+
+            @include tablet {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .testimonial-four-item-content {
+          transform: translateY(-5px);
+
+          .drop {
+            opacity: 1;
+          }
+        }
+
+        .testimonial-four-item-cliend {
+          img {
+            background: $primary-color;
+          }
+
+          h3 {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  // ##########end-testimonial-four#########
+}

@@ -1,0 +1,146 @@
+.timeline {
+  background: #f0f2f5;
+  position: relative;
+  .shape1 {
+    top: 50%;
+    left: 5%;
+    position: absolute;
+    @include desktop {
+      top: 35%;
+    }
+    @include tablet {
+      top: 30%;
+    }
+  }
+  .shape2 {
+    right: 0;
+    top: 5%;
+    position: absolute;
+  }
+  &-tab {
+    padding-bottom: 100px;
+    @include tablet {
+      padding-bottom: 40px;
+    }
+    //  hover item not complected,
+    // i am try this item,,, but i am so sorry, because i am not successfully complected this work
+    .nav,
+    .nav-pills {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 75px;
+      @include desktop {
+        margin-bottom: 60px;
+      }
+      .nav-item {
+        position: relative;
+        margin-right: 50px;
+
+        @include mobile {
+          margin-right: 20px;
+        }
+        // svg {
+        //   position: absolute;
+        //   width: 140px;
+        //   top: -20px;
+        //   left: -30px;
+        // }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 50px;
+          height: 3px;
+          background-color: #e4e6ea;
+          left: 100%;
+          top: 50%;
+          @include mobile {
+            background-color: $primary-color;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+          &::before {
+            background: none;
+          }
+        }
+        .nav-link {
+          color: black;
+          background-color: $white;
+          box-shadow: 0px 10px 30px 0px rgba(51, 77, 128, 0.12);
+          border-radius: 50%;
+          padding: 0;
+          width: 80px;
+          height: 80px;
+          text-align: center;
+          line-height: 80px;
+          display: block;
+          z-index: 1;
+          @include mobile {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+          }
+        }
+      }
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      color: #fff;
+      background-color: $primary-color;
+    }
+    .timeline-content {
+      display: flex;
+      align-items: center;
+      @include desktop {
+        display: block;
+      }
+      &-thumb {
+        width: 50%;
+        @include desktop {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          padding: 10px;
+          background: white;
+        }
+      }
+      &-desctipon {
+        width: 40%;
+        padding-left: 50px;
+        @include desktop-lg {
+          width: 50%;
+        }
+        @include desktop {
+          width: 100%;
+          padding-left: 0;
+          text-align: center;
+          padding-top: 50px;
+        }
+        @include mobile {
+          padding: 50px 50px 0;
+        }
+        span {
+          color: $primary-color;
+          padding-bottom: 15px;
+          display: block;
+          font-weight: 600;
+        }
+        h2 {
+          font-size: 32px;
+          line-height: 40px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          @include desktop-lg {
+            font-size: 25px;
+            line-height: 35px;
+          }
+          @include mobile {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}

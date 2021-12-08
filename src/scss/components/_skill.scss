@@ -1,0 +1,138 @@
+.skill {
+  overflow: hidden;
+
+  &-images {
+    background: url(../images/skill/skill.jpg);
+    background-position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    @include tablet {
+      height: 550px;
+    }
+  }
+
+  .shap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    img{
+      max-width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
+    @include desktop {
+      top: 20px;
+    }
+  }
+
+  &-wraper {
+    background: #f0f2f5;
+    padding: 135px 20px 118px 110px;
+
+    @include desktop {
+      padding-left: 60px;
+    }
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    &-content {
+      @include tablet {
+        text-align: center;
+      }
+
+      span {
+        color: $primary-color;
+        display: block;
+        margin-bottom: 15px;
+        font-weight: 600;
+
+        @include tablet {
+          margin-bottom: 0px;
+          font-size: 25px;
+          font-weight: 700;
+        }
+      }
+
+      h2 {
+        margin-bottom: 35px;
+        position: relative;
+
+        @include tablet {
+          font-size: 25px;
+          line-height: 35px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 80px;
+          height: 2px;
+          background: #d8d9dc;
+          bottom: -20px;
+
+          @include tablet {
+            background: $primary-color;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    .progress-block {
+      padding-right: 50px;
+
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      .progress {
+        height: 8px;
+        border-radius: 0px;
+        margin-bottom: 40px;
+        overflow: visible;
+        position: relative;
+        background: #dce1e6;
+      }
+
+      .progress-bar {
+        background-color: $primary-color;
+        width: 0;
+        transition: all 3s ease-in-out;
+        top: 0;
+        left: 0;
+        height: 100%;
+      }
+
+      .progress-number {
+        position: absolute;
+        top: -36px;
+        right: 0px;
+        margin-bottom: 10px;
+
+        .skill-number {
+          line-height: 22px;
+          color: $text-color-dark;
+          font-weight: 600;
+        }
+
+        span {
+          font-size: 16px;
+          color: $text-color-dark;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.marketing {
+  padding: 120px 0;
+
+  @include desktop {
+    padding: 50px 0;
+  }
+
+  @include tablet {
+    padding-bottom: 0px;
+  }
+
+  &-time-upded {
+    background: #172533;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 40px;
+
+    @include tablet {
+      display: block;
+      text-align: center;
+      margin: 0 100px;
+      padding: 30px 0 50px;
+    }
+
+    @include mobile {
+      margin: 0 50px;
+    }
+
+    &-item {
+      border-left: 1px solid $border-color;
+      padding-left: 40px;
+
+      @include tablet {
+        padding-top: 20px;
+        padding-left: 0;
+        border-left: none;
+      }
+
+      &:first-child {
+        border-left: none;
+        padding-left: 0px;
+      }
+
+      h3 {
+        margin-bottom: 0;
+        color: white;
+        font-size: 20px;
+
+        @include desktop {
+          font-size: 16px;
+        }
+      }
+
+      p {
+        color: #d4dae3;
+        margin-bottom: 0;
+
+        @include desktop {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &-content {
+    @include desktop {
+      text-align: center;
+    }
+
+    h2 {
+      padding: 50px 0 40px;
+
+      @include desktop {
+        font-size: 30px;
+      }
+
+      @include tablet {
+        font-size: 25px;
+        padding: 20px 0 20px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        padding: 10px 0;
+      }
+
+      @include mobile-xs {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+
+      @include tablet {
+        padding: 0 50px;
+      }
+
+      @include mobile-xs {
+        padding: 0 20px;
+      }
+    }
+
+    &-image {
+      padding: 100px 0;
+
+      @include desktop {
+        padding: 50px 0;
+      }
+
+      @include tablet {
+        padding: 20px 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // start marketing two
+  &-two {
+    padding: 120px 0;
+
+    @include desktop {
+      padding: 70px 0 20px;
+    }
+
+    @include tablet {
+      padding-bottom: 0;
+    }
+
+    &-image {
+      background: url(../images/marketing/marketing.jpg);
+      background-position: center;
+      background-size: cover;
+
+      &-time-upded {
+        background: #172533;
+        opacity: 0.9;
+        width: 30%;
+        padding: 85px 50px 85px;
+        margin-left: 70%;
+
+        @include desktop {
+          padding: 20px 30px;
+          width: 40%;
+          margin-left: 60%;
+        }
+
+        @include tablet {
+          text-align: center;
+          width: 50%;
+          padding: 20px 40px;
+          margin: 0 auto;
+        }
+
+        @include mobile {
+          width: 60%;
+        }
+
+        .marketing-two-item {
+          border-bottom: 1px solid $border-color;
+          margin-bottom: 10px;
+          padding-bottom: 20px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          h3 {
+            color: white;
+            font-size: 20px;
+            padding-top: 10px;
+
+            @include tablet {
+              font-size: 18px;
+            }
+          }
+
+          p {
+            color: #d4dae3;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &-content {
+      @include tablet {
+        text-align: center;
+      }
+
+      h2 {
+        padding: 50px 0 40px;
+        margin-bottom: 0;
+
+        @include desktop {
+          padding: 20px 0;
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+        @include tablet {
+          font-size: 25px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+        }
+
+        @include mobile-xs {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+
+        @include tablet {
+          padding: 0 50px;
+        }
+
+        @include mobile {
+          padding: 0 40px;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        margin: 100px 0;
+      }
+    }
+  }
+}

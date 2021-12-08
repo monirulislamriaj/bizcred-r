@@ -1,0 +1,38 @@
+// ******start-brand******
+.brand {
+  padding: 40px 0;
+
+  &-slider {
+    outline: none;
+    &-image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .brand .slick-dots li button {
+    text-indent: -9999px;
+  }
+}
+
+// ******end-btand******
+
+// ******start-brand-two******
+.brand-two {
+  padding: 40px 0;
+  background: #f0f2f5;
+
+  &-slider {
+    outline: none;
+    &-image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .brand-two.slick-dots li button {
+    text-indent: -9999px;
+  }
+}

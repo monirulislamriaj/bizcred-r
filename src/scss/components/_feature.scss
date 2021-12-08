@@ -1,0 +1,363 @@
+.feature {
+  background: url(../images/feature/feature-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include mobile {
+    padding-bottom: 50px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #00182e, $alpha: 0.85);
+    top: 0;
+    left: 0;
+  }
+
+  &-image {
+    margin-top: -50%;
+
+    @include desktop-lg {
+      margin-top: -55%;
+    }
+
+    @include desktop {
+      margin-top: -20%;
+    }
+
+    img {
+      width: 100%;
+
+      @include desktop-lg {
+        height: 570px;
+      }
+    }
+  }
+
+  &-title {
+    margin-top: -40%;
+
+    @include desktop-lg {
+      margin-top: -40%;
+    }
+
+    @include desktop {
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+
+      @include desktop {
+        color: $white;
+        font-size: 30px;
+      }
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 35px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @include mobile-xs {
+        font-size: 17px;
+      }
+    }
+
+    p {
+      margin: 0;
+      @include desktop {
+        color: $white;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-content {
+    padding-top: 120px;
+
+    @include desktop-lg {
+      padding-top: 70px;
+    }
+
+    &-item {
+      width: 46%;
+      border: 1px solid #ffffff0d;
+      background-color: rgba(255, 255, 255, 0.08);
+      float: left;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+
+      @include mobile {
+        width: 44%;
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: #ffffff;
+            fill-opacity: 1;
+          }
+        }
+      }
+
+      svg {
+        width: 80px;
+        padding: 25px 0 10px;
+        height: 80px;
+
+        path {
+          fill: #9ba2aa;
+          fill-opacity: 0.7;
+        }
+      }
+
+      h3 {
+        color: $white;
+        padding-bottom: 20px;
+        font-size: 18px;
+        margin: 0;
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // start feature three
+  &-three {
+    background: linear-gradient(rgba(0, 24, 46, 0.88), rgba(0, 24, 46, 0.88)),
+      url(../images/feature/feature-bg3.png);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 130px;
+
+    @include desktop {
+      padding-bottom: 100px;
+    }
+
+    @include tablet {
+      padding-bottom: 60px;
+      margin-top:100px
+    }
+    @include mobile {
+      margin-top:50px;
+    }
+    &-image1,
+    &-image2 {
+      margin-top: -50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-image1 {
+      .video-iframe {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+
+        .video-icon {
+          a {
+            position: absolute;
+            border: 2px solid white;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 1;
+            width: 70px;
+            height: 70px;
+            transform: translate(-50%, -50%);
+            outline: none;
+
+            @include tablet {
+              width: 50px;
+              height: 50px;
+            }
+
+            @include mobile-xs {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          i {
+            color: $primary-color;
+            position: absolute;
+            text-align: center;
+            font-size: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          background: rgba($color: $primary-color, $alpha: 0.5);
+          border-radius: 50%;
+          position: absolute;
+          transform-origin: top left;
+          animation-name: grow;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &::after {
+          width: 110px;
+          height: 110px;
+          opacity: 0.6;
+
+          @include tablet {
+            width: 100px;
+            height: 100px;
+          }
+
+          @include mobile-xs {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        &::before {
+          width: 140px;
+          height: 140px;
+          animation-delay: 1s;
+          opacity: 0.7;
+
+          @include tablet {
+            width: 120px;
+            height: 120px;
+          }
+
+          @include mobile-xs {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    &-chart{
+      background: #f0f2f5;
+      margin-top: -50%;
+      padding: 80px 60px;
+      @include desktop-lg{
+        padding: 65px 60px;
+      }
+      @include desktop{
+        padding: 25px 30px;
+      }
+      @include tablet{
+        margin-top: 50px;
+      }
+      h3{
+        font-size: 32px;
+        color: $text-color-dark;
+        line-height: 44px;
+        margin: 0 0 15px 0;
+      }
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 100px;
+
+      @include tablet {
+        padding-top: 50px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @include mobile {
+        margin: 0 auto;
+        padding-top: 50px;
+      }
+
+      .title {
+        @include tablet {
+          margin-bottom:20px;
+        }
+        h2 {
+          font-size: 45px;
+          line-height: 60px;
+          color: $white;
+
+          @include desktop-lg {
+            font-size: 40px;
+          }
+
+          @include desktop {
+            font-size: 25px;
+            line-height: 35px;
+          }
+
+          @include tablet {
+            font-size: 17px;
+            line-height: 30px;
+          }
+
+          @include mobile-xs {
+            font-size: 16px;
+            line-height: 25px;
+          }
+        }
+      }
+
+      &-link {
+        a {
+          color: $white;
+          border: 1px solid $primary-color;
+          padding: 15px 40px;
+          background: $primary-color;
+          transition: all 0.3s ease-in-out;
+
+          @include mobile {
+            padding: 12px 30px;
+          }
+
+          &:hover {
+            color: $black;
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
